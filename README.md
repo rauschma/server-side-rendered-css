@@ -1,4 +1,4 @@
-# esbuild-ssr-css
+# server-side-rendered-css
 
 My use case:
 
@@ -34,7 +34,7 @@ console.log(render(
 
 ```json
 {
-  // unmangled name of ID: name in CSS bundle
+  // "unmangled name of ID": "name in CSS bundle"
   "warning": "x1bz9l0f"
 }
 ```

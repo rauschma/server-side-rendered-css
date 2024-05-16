@@ -1,5 +1,5 @@
 {
-  "name": "esbuild-ssr-css",
+  "name": "server-side-rendered-css",
   "private": true,
   "type": "module",
   "dependencies": {
