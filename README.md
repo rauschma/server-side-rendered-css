@@ -1,4 +1,4 @@
-# server-side-rendered-css
+# server-side-rendered-css (CSS + JSON)
 
 My use case:
 
@@ -53,11 +53,14 @@ A bundler would have to treat importing `component.css.json` as:
 
 * A JSON import, so that we have access to CSS IDs and classes at runtime (in the browser).
 * A signal to associate `component.css` with `component.ts`. It has to bundle all such CSS fragments into a single CSS file.
-* Additionally, we need a way to associate non-CSS artifacts such as SVG files and fonts with modules – in a way that Node.js doesn’t complain about.
-  * One possibility: `new URL('./icon.svg', import.meta.url)`
-* The bundler should work more like a library than a framework (we call it) because static site generation requires a lot of flexibility. Candidates: esbuild, Rollup, Rolldown, etc.
 
-❌ If you know of a bundler that can do this, please let me know by filing an issue.
+Additional considerations:
+
+* The bundler should work more like a library than a framework (we call it) because static site generation requires a lot of flexibility. Candidates: esbuild, Rollup, Rolldown, etc.
+* There also needs to be a way to associate non-CSS artifacts such as SVG files and fonts with modules – in a way that Node.js doesn’t complain about.
+  * One possibility: `new URL('./icon.svg', import.meta.url)`
+
+❌ If you know of a bundler that fulfills all of these requirements (potentially in tandem with a plugin): Please let me know by filing an issue.
 
 ### esbuild
 
