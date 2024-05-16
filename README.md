@@ -34,6 +34,7 @@ console.log(render(
 
 ```json
 {
+  // unmangled name of ID: name in CSS bundle
   "warning": "x1bz9l0f"
 }
 ```
@@ -41,7 +42,7 @@ console.log(render(
 `component.css`:
 
 ```css
-#warning {
+#warning { /* CSS bundle: #x1bz9l0f */
   background-color: red;
 }
 ```
