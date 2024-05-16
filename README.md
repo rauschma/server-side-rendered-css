@@ -45,12 +45,18 @@ console.log(render(
 }
 ```
 
-## What an esbuild plugin would have to do
+## What a bundler would have to do
 
-The plugin would have to forward `component.css.json` to two loaders:
+A bundler would have to treat importing `component.css.json` as:
 
-* `json`: Treat it like a normal JSON import so that we have access to CSS IDs and classes at runtime (in the browser).
-* `css`: Bundle all the CSS fragments into a single CSS file.
+* A JSON import, so that we have access to CSS IDs and classes at runtime (in the browser).
+* A signal to associate `component.css` with `component.ts`. It has to bundle all such CSS fragments into a single CSS file.
+
+❌ If you know of a bundler that can do this, please let me know by filing an issue.
+
+### Idea for esbuild
+
+For esbuild, one would have to write a plugin which forwards the single import `component.css.json` to two loaders: `json` and `css`. As far as I can tell, that is currently [not possible](https://github.com/evanw/esbuild/issues/1233).
 
 ## How would `component.css.json` be generated?
 
