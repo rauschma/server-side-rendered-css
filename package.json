@@ -1,0 +1,9 @@
+{
+  "name": "esbuild-ssr-css",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "preact": "^10.22.0",
+    "preact-render-to-string": "^6.4.2"
+  }
+}
