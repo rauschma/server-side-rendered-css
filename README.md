@@ -62,6 +62,13 @@ Additional considerations:
 
 ❌ If you know of a bundler that fulfills all of these requirements (potentially in tandem with a plugin): Please let me know by filing an issue.
 
+## How would `component.css.json` be generated?
+
+* Initially manually.
+* Soon after: automatically, somehow. There are several libraries out there that can be used.
+
+## Bundlers that may be able to support CSS+JSON – with the right plugin
+
 ### esbuild
 
 * One would have to write a plugin which forwards the single import `component.css.json` to two loaders: `json` and `css`. As far as I can tell, that is currently [not possible](https://github.com/evanw/esbuild/issues/1233).
@@ -71,11 +78,6 @@ Additional considerations:
 
 * `new URL(...)` for artifacts: https://www.npmjs.com/package/@web/rollup-plugin-import-meta-assets
 * Plugin for importing `component.css.json`: Not sure. I’ll have to investigate further.
-
-## How would `component.css.json` be generated?
-
-* Initially manually.
-* Soon after: automatically, somehow. There are several libraries out there that can be used.
 
 ## FAQ
 
