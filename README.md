@@ -72,7 +72,7 @@ Additional considerations:
 * Node.js is fine with the JSON imports – in contrast to importing CSS, which doesn’t work for this use case.
 * TypeScript warns us during editing if we get CSS names wrong.
 
-## Bundlers that may be able to support CSS+JSON – with the right plugin
+## Bundlers that may be able to support CSS+JSON – with the right plugins
 
 ### esbuild
 
