@@ -1,4 +1,4 @@
-# server-side-rendered-css (CSS + JSON)
+# server-side-rendered-css: CSS + JSON
 
 My use case:
 
@@ -76,6 +76,17 @@ Additional considerations:
 
 * Initially manually.
 * Soon after: automatically, somehow. There are several libraries out there that can be used.
+
+## FAQ
+
+### How is this different from CSS modules?
+
+It’s very similar: If Node.js and TypeScript supported CSS modules better then that’s what I would use. The extra JSON file helps with both (and is not really necessary during bundling).
+
+TypeScript tooling for CSS modules (which, alas, doesn’t solve the Node.js issues):
+
+* [typescript-plugin-css-modules](https://github.com/mrmckeb/typescript-plugin-css-modules): TypeScript language service plugin (doesn’t help with tsc)
+* [typed-css-modules](https://github.com/Quramy/typed-css-modules): creates .d.ts files from CSS Modules .css files.
 
 ## Benefits of this approach
 
