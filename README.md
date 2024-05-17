@@ -8,7 +8,7 @@ My use case:
 
 I’m still in the process of thinking this fully through. Thus, it’s possible I made mistakes somewhere.
 
-## Example code
+## Example
 
 Example – files:
 
@@ -47,7 +47,7 @@ console.log(render(
 }
 ```
 
-## What a bundler would have to do
+### What a bundler would have to do
 
 A bundler would have to treat importing `component.css.json` as:
 
@@ -62,7 +62,7 @@ Additional considerations:
 
 ❌ If you know of a bundler that fulfills all of these requirements (potentially in tandem with a plugin): Please let me know by filing an issue.
 
-## How would `component.css.json` be generated?
+### How would `component.css.json` be generated?
 
 * Initially manually.
 * Soon after: automatically, somehow. There are several libraries out there that can be used.
