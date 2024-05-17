@@ -67,6 +67,11 @@ Additional considerations:
 * Initially manually.
 * Soon after: automatically, somehow. There are several libraries out there that can be used.
 
+## Benefits of this approach
+
+* Node.js is fine with the JSON imports – in contrast to importing CSS, which doesn’t work for this use case.
+* TypeScript warns us during editing if we get CSS names wrong.
+
 ## Bundlers that may be able to support CSS+JSON – with the right plugin
 
 ### esbuild
@@ -89,8 +94,3 @@ TypeScript tooling for CSS modules (which, alas, doesn’t solve the Node.js iss
 
 * [typescript-plugin-css-modules](https://github.com/mrmckeb/typescript-plugin-css-modules): TypeScript language service plugin (doesn’t help with tsc)
 * [typed-css-modules](https://github.com/Quramy/typed-css-modules): creates .d.ts files from CSS Modules .css files.
-
-## Benefits of this approach
-
-* Node.js is fine with the JSON imports – in contrast to importing CSS, which doesn’t work for this use case.
-* TypeScript warns us during editing if we get CSS names wrong.
